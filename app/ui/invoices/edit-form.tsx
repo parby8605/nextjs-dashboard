@@ -20,7 +20,7 @@ export default function EditInvoiceForm({
 }) {
   const initialState: State = { message: null, errors: {} };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
-  const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
+  const [state, formAction] = useActionState(updateInvoiceWithId, initialState); // eslint-disable-line @typescript-eslint/no-unused-vars
   return (
     <form action={formAction}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
