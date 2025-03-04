@@ -6,6 +6,12 @@ import { lusitana } from "@/app/ui/fonts";
 import { Suspense } from "react";
 import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
 import { fetchInvoicesPages } from "@/app/lib/data";
+import { Metadata } from "next";
+
+//metadata 활용하여 페이지 타이틀 설정
+export const metadata: Metadata = {
+  title: "Invoices",
+};
 
 //next의 app router에 의해 searchParams는 자동으로 페이지 컴포넌트에 제공됨
 export default async function Page(props: {
